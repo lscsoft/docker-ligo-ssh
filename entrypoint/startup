@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ligo-proxy-init "$1"
+exec gsissh "$2"
