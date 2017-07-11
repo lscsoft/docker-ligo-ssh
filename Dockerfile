@@ -11,4 +11,4 @@ RUN apt-get update && \
 
 COPY /entrypoint/startup /usr/local/bin/startup
 ENTRYPOINT [ "/usr/local/bin/startup" ]
-# user must supply 2 arguments: LIGO username and hostname to which to connect
+CMD ["ldas-grid.ligo.caltech.edu"]

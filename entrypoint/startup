@@ -1,4 +1,9 @@
 #!/bin/sh
 
-ligo-proxy-init "$1"
-exec gsissh "$2"
+if [ "$#" -ne 1 ]; then
+    echo "This script takes only 1 argument: a destination SSH host"
+    exit 1
+fi
+
+read -p "Enter your LIGO.ORG username: " username && echo $username | xargs -n 1 ligo-proxy-init
+exec gsissh "$1"
