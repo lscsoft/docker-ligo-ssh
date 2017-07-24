@@ -1,9 +1,11 @@
 #!/bin/sh
 
-if [ "$#" -ne 1 ]; then
-    echo "This script takes only 1 argument: a destination SSH host"
+if [ "$#" -lt 1 ]; then
+    echo "This script takes at least 1 argument: a destination SSH host"
+    echo "It optionally takes any set of arguments available to gsissh."
+    gsissh --help
     exit 1
 fi
 
 read -p "Enter your LIGO.ORG username: " username && echo $username | xargs -n 1 ligo-proxy-init
-exec gsissh "$1"
+exec gsissh "$@"
