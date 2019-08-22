@@ -1,8 +1,8 @@
-FROM ligo/base:jessie
+FROM containers.ligo.org/docker/base:stretch
 
 LABEL name="Container for running GSI-enabled OpenSSH" \
-      maintainer="Tom Downes <thomas.downes@ligo.org>" \
-      date="20170710" \
+      maintainer="Shawn Kwang <shawn.kwang@ligo.org>" \
+      date="20190822" \
       support="Reference Platform"
 
 RUN apt-get update && \
