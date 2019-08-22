@@ -1,6 +1,6 @@
-# ligo/ssh
+# ligo-ssh
 
-The `ligo/ssh` container is intended for members of the LIGO-Virgo Collaboartion
+The `ligo-ssh` container is intended for members of the LIGO-Virgo Collaboartion
 who need to connect to grid resources via
 [GSI-OpenSSH](https://github.com/globus/gsi-openssh) on platforms not supported
 by gsissh.
@@ -15,15 +15,18 @@ invocation. The container must be run as an interactive termainal, _e.g._
 to connect to Caltech:
 
 ```
-docker run -it ligo/ssh
+docker run -it containers.ligo.org/docker/ligo-ssh:stretch
 ```
 
 or to UWM:
 
 ```
-docker run -it ligo/ssh submit.ligo.uwm.edu
+docker run -it containers.ligo.org/docker/ligo-ssh:stretch submit.ligo.uwm.edu
 ```
 
+Notice the examples above use `stretch` or Debian v9 containers. You may also the the `el7` containers for Scientific Linux 7.
+
 ## Future work
+
 A menu system like that found on `ssh.ligo.org` may be a way to make the
 container more user-friendly.
