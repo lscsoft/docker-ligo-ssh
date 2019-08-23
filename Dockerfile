@@ -7,7 +7,7 @@ LABEL name="Container for running GSI-enabled OpenSSH" \
 
 RUN yum -y update
 
-RUN yum -y ldg-client \
+RUN yum -y install ldg-client \
     yum clean all
 
 COPY /entrypoint/startup /usr/local/bin/startup
