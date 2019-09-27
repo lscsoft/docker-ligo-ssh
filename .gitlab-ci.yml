@@ -1,7 +1,7 @@
 image: docker:latest
 
 variables:
-  REPOSITORY: 'cgca/ligo-ssh'
+  REPOSITORY: 'igwn/ligo-ssh'
 
 stages:
   - docker
