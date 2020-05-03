@@ -1,8 +1,7 @@
-FROM containers.ligo.org/docker/base:buster
+FROM igwn/base:buster
 
 LABEL name="Container for running GSI-enabled OpenSSH" \
       maintainer="Shawn Kwang <shawn.kwang@ligo.org>" \
-      date="20190909" \
       support="Reference Platform"
 
 RUN apt-get update && \
