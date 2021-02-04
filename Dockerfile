@@ -14,6 +14,10 @@ RUN yum -y update && \
 # See https://blog.tomecek.net/post/kerberos-in-a-container/
 ENV KRB5CCNAME="FILE:/tmp/tgt"
 
+# IGWN hosts use port 22 for ordinary ssh with ssh keys,
+# but port 2222 for gsissh connections.
+RUN echo Port 2222 >> /etc/gsissh/ssh_config
+
 COPY /entrypoint/startup /usr/local/bin/startup
 ENTRYPOINT [ "/usr/local/bin/startup" ]
 CMD ["ldas-grid.ligo.caltech.edu"]
