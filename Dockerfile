@@ -1,8 +1,8 @@
 FROM igwn/base:el7
 
-LABEL name="Container for running GSI-enabled OpenSSH" \
-      maintainer="Shawn Kwang <shawn.kwang@ligo.org>" \
-      support="Reference Platform"
+LABEL name="Container for running GSI-enabled OpenSSH"
+LABEL maintainer="Shawn Kwang <shawn.kwang@ligo.org>"
+LABEL support="Unsupported"
 
 RUN yum -y update && \
     yum -y install ldg-client && \
